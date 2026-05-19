@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARCOS GOMES</title>
+  <link rel="icon" type="image/png" href="/flag.png">
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Georgia, 'Times New Roman', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-style: italic;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      color: #000;
+    }
+
+    #foto {
+      width: 600px;
+      max-width: 100%;
+      display: block;
+    }
+
+    #relogio {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #5a5acd;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 14px;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: #5a5acd;
+      text-decoration: underline;
+      font-style: italic;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    nav span {
+      color: #999;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MARCOS GOMES</h1>
+
+  <!-- Troque "foto.jpg" pelo nome da sua imagem -->
+  <img id="foto" src="851381092.jpg" alt="minha foto">
+
+  <p id="relogio">São Paulo, carregando...</p>
+
+  <nav>
+    <a href="sobre/index.html">sobre</a>
+    <span>//</span>
+    <a href="projetos/index.html">projetos</a>
+    <span>//</span>
+    <a href="blog/index.html">posts</a>
+    <span>//</span>
+    <a href="contato/index.html">contato</a>
+  </nav>
+
+  <script>
+    function atualizarRelogio() {
+      const agora = new Date();
+      const hora = agora.toLocaleTimeString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+      document.getElementById("relogio").textContent = "Based in São Paulo, Brazil - " + hora + " BRT";
+    }
+    atualizarRelogio();
+    setInterval(atualizarRelogio, 1000);
+  </script>
+
+</body>
+</html>
