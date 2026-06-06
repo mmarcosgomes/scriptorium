@@ -1,249 +1,420 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Status temporis — Marcos Gomes</title>
-    <style>
-      body {
-        background-color: #ffffff;
-        font-family: Georgia, "Times New Roman", serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 110px 20px;
-        margin: 0;
-        box-sizing: border-box;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Status temporis — Marcos Gomes</title>
+        <style>
+            body {
+                background-color: #ffffff;
+                font-family: Georgia, "Times New Roman", serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 110px 20px;
+                margin: 0;
+                box-sizing: border-box;
+            }
 
-      .container {
-        max-width: 760px;
-        width: 100%;
-      }
+            .container {
+                max-width: 760px;
+                width: 100%;
+            }
 
-      .data {
-        font-size: 0.8rem;
-        color: #999;
-        font-style: italic;
-        margin-bottom: 4px;
-        text-align: center;
-      }
+            .data {
+                font-size: 0.8rem;
+                color: #999;
+                font-style: italic;
+                margin-bottom: 4px;
+                text-align: center;
+            }
 
-      .subtitle {
-        font-size: 0.9rem;
-        color: #666;
-        font-style: italic;
-        margin: 0 0 12px;
-        text-align: center;
-      }
+            .subtitle {
+                font-size: 0.9rem;
+                color: #666;
+                font-style: italic;
+                margin: 0 0 12px;
+                text-align: center;
+            }
 
-      h1 {
-        font-size: 2rem;
-        font-style: italic;
-        font-weight: bold;
-        color: #000;
-        margin: 0 0 4px;
-        line-height: 1.4;
-        text-align: center;
-      }
+            h1 {
+                font-size: 2rem;
+                font-style: italic;
+                font-weight: bold;
+                color: #000;
+                margin: 0 0 4px;
+                line-height: 1.4;
+                text-align: center;
+            }
 
-      .hero {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 24px;
-        margin-top: 28px;
-        margin-bottom: 28px;
-        text-align: left;
-      }
+            .hero {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 24px;
+                margin-top: 28px;
+                margin-bottom: 28px;
+                text-align: left;
+            }
 
-      img {
-        width: 180px;
-        border-radius: 0;
-        display: block;
-        margin: 0;
-        flex: 0 0 auto;
-      }
+            img {
+                width: 180px;
+                border-radius: 0;
+                display: block;
+                margin: 0;
+                flex: 0 0 auto;
+            }
 
-      .identity {
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        gap: 6px;
-      }
+            .identity {
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                gap: 6px;
+            }
 
-      .name {
-        margin: 0;
-        font-size: clamp(1.68rem, 3.6vw, 2.4rem);
-        font-weight: 400;
-        line-height: 1;
-      }
+            .name {
+                margin: 0;
+                font-size: clamp(1.68rem, 3.6vw, 2.4rem);
+                font-weight: 400;
+                line-height: 1;
+            }
 
-      .stats {
-        max-width: 540px;
-        font-size: 0.72rem;
-        line-height: 1.45;
-      }
+            .stats {
+                max-width: 540px;
+                font-size: 0.72rem;
+                line-height: 1.45;
+            }
 
-      .stats p {
-        margin: 0;
-        font-size: inherit;
-        line-height: inherit;
-      }
+            .stats p {
+                margin: 0;
+                font-size: inherit;
+                line-height: inherit;
+            }
 
-      .stats .intro {
-        margin-top: 0;
-      }
+            .stats .intro {
+                margin-top: 0;
+            }
 
-      .stats .section-title {
-        margin-top: 12px;
-        font-weight: 400;
-      }
+            .stats .section-title {
+                margin-top: 12px;
+                font-weight: 400;
+            }
 
-      .stats strong {
-        font-weight: 700;
-        font-size: inherit;
-      }
+            .stats strong {
+                font-weight: 700;
+                font-size: inherit;
+            }
 
-      .stats .closing {
-        margin-top: 10px;
-      }
+            .stats .closing {
+                margin-top: 10px;
+            }
 
-      p {
-        font-size: 0.95rem;
-        color: #222;
-        line-height: 1.8;
-        margin-bottom: 20px;
-      }
+            .essay {
+                max-width: 660px;
+                margin: 0 auto;
+            }
 
-      .voltar:hover {
-        color: #000;
-      }
+            .essay h2 {
+                font-size: 1.1rem;
+                font-style: italic;
+                font-weight: bold;
+                color: #000;
+                margin: 0 0 18px;
+                text-align: center;
+            }
 
-      .voltar {
-        display: block;
-        margin-top: 48px;
-        color: #5a5acd;
-        font-style: italic;
-        font-size: 0.9rem;
-        text-decoration: none;
-        text-align: center;
-      }
+            .essay p {
+                font-size: 0.95rem;
+                color: #222;
+                line-height: 1.8;
+                margin-bottom: 18px;
+                text-align: justify;
+                hyphens: auto;
+            }
 
-      @media (max-width: 720px) {
-        .hero {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+            .essay .credits {
+                font-size: 0.84rem;
+                color: #666;
+                font-style: italic;
+                text-align: center;
+                margin-bottom: 10px;
+            }
 
-        img {
-          width: 150px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Status temporis</h1>
-      <div class="subtitle">O tempo que me resta.</div>
-      <div class="data">04 Jun 2026</div>
+            .essay a {
+                color: #5a5acd;
+                text-decoration: underline;
+                word-break: break-word;
+            }
 
-      <div class="hero">
-        <img src="/me.jpg" alt="Marcos Gomes" />
-        <div class="identity">
-          <h2 class="name">Marcos Gomes</h2>
-          <div class="stats" aria-live="polite">
-            <p class="intro">
-              Eu tenho <strong id="age-years">0,000000000000</strong> anos.
-            </p>
-            <p>
-              Eu provavelmente tenho
-              <strong id="remaining-years">0,000000000000</strong> anos
-              restantes ou <strong id="remaining-months">0</strong> meses,
-              <strong id="remaining-weeks">0</strong> semanas,
-              <strong id="remaining-days">0</strong> dias,
-              <strong id="remaining-hours">0</strong> horas,
-              <strong id="remaining-minutes">0</strong> minutos,
-              <strong id="remaining-seconds">0</strong> segundos.
-            </p>
-            <p class="section-title">Eu ainda poderia</p>
-            <p>ler cerca de <strong id="books">0</strong> livros.</p>
-            <p>conhecer cerca de <strong id="places">0</strong> novos lugares.</p>
-            <p>
-              estudar por cerca de
-              <strong id="study-hours">0</strong> horas.
-            </p>
-            <p>ver <strong id="sunsets">0</strong> pores do sol.</p>
-            <p>
-              meu coração ainda poderia bater cerca de
-              <strong id="heartbeats">0</strong> vezes.
-            </p>
-            <p class="closing">
-              Eu vou oferecer cada dia restante a Jesus Cristo.
-            </p>
-          </div>
+            p {
+                font-size: 0.95rem;
+                color: #222;
+                line-height: 1.8;
+                margin-bottom: 20px;
+            }
+
+            .voltar:hover {
+                color: #000;
+            }
+
+            .voltar {
+                display: block;
+                margin-top: 48px;
+                color: #5a5acd;
+                font-style: italic;
+                font-size: 0.9rem;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            @media (max-width: 720px) {
+                .hero {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                img {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Status temporis</h1>
+            <div class="subtitle">O tempo que me resta.</div>
+            <div class="data">04 Jun 2026</div>
+
+            <div class="hero">
+                <img src="/me.jpg" alt="Marcos Gomes" />
+                <div class="identity">
+                    <h2 class="name">Marcos Gomes</h2>
+                    <div class="stats" aria-live="polite">
+                        <p class="intro">
+                            Eu tenho
+                            <strong id="age-years">0,000000000000</strong> anos.
+                        </p>
+                        <p>
+                            Eu provavelmente tenho
+                            <strong id="remaining-years">0,000000000000</strong>
+                            anos restantes ou
+                            <strong id="remaining-months">0</strong> meses,
+                            <strong id="remaining-weeks">0</strong> semanas,
+                            <strong id="remaining-days">0</strong> dias,
+                            <strong id="remaining-hours">0</strong> horas,
+                            <strong id="remaining-minutes">0</strong> minutos,
+                            <strong id="remaining-seconds">0</strong> segundos.
+                        </p>
+                        <p class="section-title">Eu ainda poderia</p>
+                        <p>
+                            ler cerca de <strong id="books">0</strong> livros.
+                        </p>
+                        <p>
+                            conhecer cerca de
+                            <strong id="places">0</strong> novos lugares.
+                        </p>
+                        <p>
+                            estudar por cerca de
+                            <strong id="study-hours">0</strong> horas.
+                        </p>
+                        <p>ver <strong id="sunsets">0</strong> pores do sol.</p>
+                        <p>
+                            meu coração ainda poderia bater cerca de
+                            <strong id="heartbeats">0</strong> vezes.
+                        </p>
+                        <p class="closing">
+                            Eu vou oferecer cada dia restante a Jesus Cristo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="essay">
+                <h2>Status Temporis</h2>
+
+                <p>
+                    Estava no YouTube procurando algo para assistir e vi um
+                    projeto do canal Kavan, no qual ele programa um simulador de
+                    buraco negro. Já tinha assistido a esse vídeo e a outros,
+                    como o simulador de átomo. O cara é um gênio. Ele não tem
+                    uma foto do Newton de perfil à toa. O que eu não sabia é que
+                    ele tem apenas 17 anos. Ao entrar no site que ele mantém,
+                    além dos projetos que já realizou, há também os projetos em
+                    que está trabalhando, entre eles um simulador de um reator
+                    de fusão e até mesmo um projeto de foguete. Mas eu, na minha
+                    total ignorância, vi um "contador de tempo de vida", muito
+                    simples, que certamente não está lá para chamar atenção,
+                    muito menos para ser um grande projeto é só um pequeno
+                    detalhe do site, mas que me fez pensar bastante.
+                </p>
+
+                <p>
+                    O contador é muito simples: basicamente, um contador do dia
+                    e hora em que nascemos até uma data de previsão de morte.
+                    Bom, acho que vivo até 2101; são 100 anos. Com os avanços da
+                    medicina, acho que chego até lá, se eu não morrer por outra
+                    coisa. Enfim. Desses 100 anos, já se passaram 25, mas o que
+                    ainda posso fazer em 74 anos e alguns meses? Muita coisa.
+                    Mas nem tanto assim. Por exemplo, fazendo uma viagem por ano
+                    para novos lugares, são apenas 74 viagens, e isso sendo
+                    muito otimista, pois vai ser um pouco difícil fazer uma
+                    viagem com 99 anos. Outro exemplo é a leitura de livros:
+                    lendo um livro por mês, são 896 livros. Mesmo sendo um
+                    número alto, é provavelmente uma parede de livros. Não são
+                    muitos; passa uma certa impressão de que é pouco e de que a
+                    vida é curta demais.
+                </p>
+
+                <p>
+                    E, sim, a vida é curta demais. São 27.300 dias a partir de
+                    hoje, ou mesmo 3.900 semanas até a minha morte. E existe a
+                    possibilidade de morrer antes, o que diminui ainda mais esse
+                    tempo. O tempo que nos resta é muito pouco. Ainda há tempo
+                    para ver apenas 27.300 pores do sol e, claro, é menos, pois
+                    não temos pores do sol todos os dias. Um bom pôr do sol, e
+                    também não conseguimos vê-los todos os dias. E, mesmo vendo
+                    um por semana, são apenas 3.900.
+                </p>
+
+                <p>
+                    Pensando nas coisas que realmente gostamos e às quais
+                    estamos dedicados a melhorar, nossa família, amigos,
+                    carreira, estudos etc., precisamos ressignificar e valorizar
+                    ainda mais, pois não temos tanto tempo quanto imaginamos.
+                    Passar tanto tempo nas redes sociais, ou então fazendo
+                    coisas que não são realmente construtivas ou contemplativas,
+                    é uma escolha que não é das melhores. Hoje, imaginando
+                    quanto tempo deixei passar com redes sociais, não sei o que
+                    seria possível ter ou construir com esse tempo, ainda mais
+                    sendo de uma geração tão ligada à internet, acredito que
+                    passei mais tempo na internet jogando, assistindo Youtube,
+                    redes sociais etc, do que em qualquer outra coisa na minha
+                    vida. Pode ser que sejamos a geração mais afetada pelo uso
+                    da internet crônica. Estamos perdendo tempo da nossa vida e
+                    esquecendo que ela está passando.
+                </p>
+
+                <p class="credits">
+                    Projeto disponível em:
+                    <a
+                        href="https://github.com/mmarcosgomes/codices-minimi/blob/main/Status_Temporis.py"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        https://github.com/mmarcosgomes/codices-minimi/blob/main/Status_Temporis.py
+                    </a>
+                </p>
+
+                <p class="credits">
+                    Referência do projeto:
+                    <a href="https://www.kavang.com/" target="_blank" rel="noopener noreferrer">
+                        https://www.kavang.com/
+                    </a>
+                </p>
+
+                <p class="credits">
+                    Crédito do vídeo:
+                    <a href="https://www.youtube.com/@kevkev-70" target="_blank" rel="noopener noreferrer">
+                        https://www.youtube.com/@kevkev-70
+                    </a>
+                </p>
+
+                <p class="credits">Escrito por mim.</p>
+                <p class="credits">Ortografia e pontuação por IA.</p>
+            </div>
+
+            <a class="voltar" href="/blog/index.html">← voltar</a>
         </div>
-      </div>
 
-      <a class="voltar" href="/blog/index.html">← voltar</a>
-    </div>
+        <script>
+            const birthDate = new Date(2001, 2, 4);
+            const endDate = new Date(2101, 2, 4);
+            const DAY_MS = 24 * 60 * 60 * 1000;
+            const HOUR_MS = 60 * 60 * 1000;
+            const MINUTE_MS = 60 * 1000;
+            const WEEK_MS = 7 * DAY_MS;
+            const YEAR_MS = 365.2425 * DAY_MS;
 
-    <script>
-      const birthDate = new Date(2001, 2, 4);
-      const endDate = new Date(2101, 2, 4);
-      const DAY_MS = 24 * 60 * 60 * 1000;
-      const HOUR_MS = 60 * 60 * 1000;
-      const MINUTE_MS = 60 * 1000;
-      const WEEK_MS = 7 * DAY_MS;
-      const YEAR_MS = 365.2425 * DAY_MS;
+            const formatYears = new Intl.NumberFormat("pt-BR", {
+                minimumFractionDigits: 12,
+                maximumFractionDigits: 12,
+            });
 
-      const formatYears = new Intl.NumberFormat("pt-BR", {
-        minimumFractionDigits: 12,
-        maximumFractionDigits: 12,
-      });
+            const formatInteger = new Intl.NumberFormat("pt-BR", {
+                maximumFractionDigits: 0,
+            });
 
-      const formatInteger = new Intl.NumberFormat("pt-BR", {
-        maximumFractionDigits: 0,
-      });
+            const setText = (id, value) => {
+                const element = document.getElementById(id);
 
-      const setText = (id, value) => {
-        const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = value;
+                }
+            };
 
-        if (element) {
-          element.textContent = value;
-        }
-      };
+            const updateStats = () => {
+                const now = new Date();
+                const ageYears = (now - birthDate) / YEAR_MS;
+                const remainingMs = Math.max(0, endDate - now);
+                const remainingYears = remainingMs / YEAR_MS;
+                const remainingMonths = remainingYears * 12;
+                const remainingWeeks = remainingMs / WEEK_MS;
+                const remainingDays = remainingMs / DAY_MS;
+                const remainingHours = remainingMs / HOUR_MS;
+                const remainingMinutes = remainingMs / MINUTE_MS;
+                const remainingSeconds = remainingMs / 1000;
 
-      const updateStats = () => {
-        const now = new Date();
-        const ageYears = (now - birthDate) / YEAR_MS;
-        const remainingMs = Math.max(0, endDate - now);
-        const remainingYears = remainingMs / YEAR_MS;
-        const remainingMonths = remainingYears * 12;
-        const remainingWeeks = remainingMs / WEEK_MS;
-        const remainingDays = remainingMs / DAY_MS;
-        const remainingHours = remainingMs / HOUR_MS;
-        const remainingMinutes = remainingMs / MINUTE_MS;
-        const remainingSeconds = remainingMs / 1000;
+                setText("age-years", formatYears.format(ageYears));
+                setText("remaining-years", formatYears.format(remainingYears));
+                setText(
+                    "remaining-months",
+                    formatInteger.format(Math.floor(remainingMonths)),
+                );
+                setText(
+                    "remaining-weeks",
+                    formatInteger.format(Math.floor(remainingWeeks)),
+                );
+                setText(
+                    "remaining-days",
+                    formatInteger.format(Math.floor(remainingDays)),
+                );
+                setText(
+                    "remaining-hours",
+                    formatInteger.format(Math.floor(remainingHours)),
+                );
+                setText(
+                    "remaining-minutes",
+                    formatInteger.format(Math.floor(remainingMinutes)),
+                );
+                setText(
+                    "remaining-seconds",
+                    formatInteger.format(Math.floor(remainingSeconds)),
+                );
+                setText(
+                    "books",
+                    formatInteger.format(Math.floor(remainingYears * 12)),
+                );
+                setText(
+                    "places",
+                    formatInteger.format(Math.floor(remainingYears)),
+                );
+                setText(
+                    "study-hours",
+                    formatInteger.format(Math.floor(remainingDays * 2)),
+                );
+                setText(
+                    "sunsets",
+                    formatInteger.format(Math.floor(remainingDays)),
+                );
+                setText(
+                    "heartbeats",
+                    formatInteger.format(Math.floor(remainingMinutes * 72)),
+                );
 
-        setText("age-years", formatYears.format(ageYears));
-        setText("remaining-years", formatYears.format(remainingYears));
-        setText("remaining-months", formatInteger.format(Math.floor(remainingMonths)));
-        setText("remaining-weeks", formatInteger.format(Math.floor(remainingWeeks)));
-        setText("remaining-days", formatInteger.format(Math.floor(remainingDays)));
-        setText("remaining-hours", formatInteger.format(Math.floor(remainingHours)));
-        setText("remaining-minutes", formatInteger.format(Math.floor(remainingMinutes)));
-        setText("remaining-seconds", formatInteger.format(Math.floor(remainingSeconds)));
-        setText("books", formatInteger.format(Math.floor(remainingYears * 12)));
-        setText("places", formatInteger.format(Math.floor(remainingYears)));
-        setText("study-hours", formatInteger.format(Math.floor(remainingDays * 2)));
-        setText("sunsets", formatInteger.format(Math.floor(remainingDays)));
-        setText("heartbeats", formatInteger.format(Math.floor(remainingMinutes * 72)));
+                requestAnimationFrame(updateStats);
+            };
 
-        requestAnimationFrame(updateStats);
-      };
-
-      updateStats();
-    </script>
-  </body>
+            updateStats();
+        </script>
+    </body>
 </html>
