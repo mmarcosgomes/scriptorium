@@ -112,8 +112,8 @@
     }
 
     #filter-all:checked ~ .filtros label[for="filter-all"],
-    #filter-japones:checked ~ .filtros label[for="filter-japones"],
-    #filter-fisica:checked ~ .filtros label[for="filter-fisica"],
+    #filter-latim:checked ~ .filtros label[for="filter-latim"],
+    #filter-matematica-e-fisica:checked ~ .filtros label[for="filter-matematica-e-fisica"],
     #filter-computacao:checked ~ .filtros label[for="filter-computacao"],
     #filter-saude-performance:checked ~ .filtros label[for="filter-saude-performance"],
     #filter-jesus:checked ~ .filtros label[for="filter-jesus"] {
@@ -124,16 +124,16 @@
       display: block;
     }
 
-    #filter-japones:checked ~ .posts .post,
-    #filter-fisica:checked ~ .posts .post,
+    #filter-latim:checked ~ .posts .post,
+    #filter-matematica-e-fisica:checked ~ .posts .post,
     #filter-computacao:checked ~ .posts .post,
     #filter-saude-performance:checked ~ .posts .post,
     #filter-jesus:checked ~ .posts .post {
       display: none;
     }
 
-    #filter-japones:checked ~ .posts .post[data-tag="japones"],
-    #filter-fisica:checked ~ .posts .post[data-tag="fisica"],
+    #filter-latim:checked ~ .posts .post[data-tag="latim"],
+    #filter-matematica-e-fisica:checked ~ .posts .post[data-tag="matematica-e-fisica"],
     #filter-computacao:checked ~ .posts .post[data-tag="computacao"],
     #filter-saude-performance:checked ~ .posts .post[data-tag="saude-performance"],
     #filter-jesus:checked ~ .posts .post[data-tag="jesus"] {
@@ -146,14 +146,14 @@
     <h1>POSTS</h1>
 
     <input class="filter-control" type="radio" name="tag-filter" id="filter-all" checked>
-    <input class="filter-control" type="radio" name="tag-filter" id="filter-japones">
-    <input class="filter-control" type="radio" name="tag-filter" id="filter-fisica">
+    <input class="filter-control" type="radio" name="tag-filter" id="filter-latim">
+    <input class="filter-control" type="radio" name="tag-filter" id="filter-matematica-e-fisica">
     <input class="filter-control" type="radio" name="tag-filter" id="filter-computacao">
     <input class="filter-control" type="radio" name="tag-filter" id="filter-saude-performance">
     <input class="filter-control" type="radio" name="tag-filter" id="filter-jesus">
 
     <div class="filtros">
-      <label for="filter-all">todos</label><span>//</span><label for="filter-japones">Japonês</label><span>//</span><label for="filter-fisica">Física</label><span>//</span><label for="filter-computacao">Computação</label><span>//</span><label for="filter-saude-performance">Saúde e Performance</label><span>//</span><label for="filter-jesus">Jesus</label>
+      <label for="filter-all">todos</label><span>//</span><label for="filter-latim">Latim</label><span>//</span><label for="filter-matematica-e-fisica">Matemática e Física</label><span>//</span><label for="filter-computacao">Computação</label><span>//</span><label for="filter-saude-performance">Saúde e Performance</label><span>//</span><label for="filter-jesus">Jesus</label>
     </div>
 
     <div class="posts">
